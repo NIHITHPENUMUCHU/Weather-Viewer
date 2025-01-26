@@ -9,9 +9,8 @@ function App() {
   const [suggestions, setSuggestions] = useState<string[]>([]);
 
   // Fetch the API key from the environment variable
-  const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
-  console.log("API Key:", apiKey);
-
+  const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+    console.log("API Key:", apiKey);
   const debounce = (func: Function, wait: number) => {
     let timeout: NodeJS.Timeout;
     return (...args: any[]) => {
