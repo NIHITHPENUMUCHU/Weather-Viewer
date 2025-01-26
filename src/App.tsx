@@ -10,6 +10,7 @@ function App() {
 
   // Fetch the API key from the environment variable
   const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
+  console.log("API Key:", apiKey);
 
   const debounce = (func: Function, wait: number) => {
     let timeout: NodeJS.Timeout;
